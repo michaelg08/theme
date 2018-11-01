@@ -1,0 +1,232 @@
+@import 'module/mixins';
+@import 'module/cart';
+@import 'module/minicart';
+@import 'module/checkout';
+
+/** Font fix **/ 
+#checkout {
+  font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif !important;
+}
+.abs-checkout-title, .opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary > .title, .checkout-agreements-items .checkout-agreements-item-title {
+  font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+}
+.abs-field-tooltip input, .field .control._with-tooltip input {
+  font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+}
+
+
+.checkout-cart-index {
+  .page-title {
+    font-size: 24px;
+    color: $breadcrumbs-color;
+    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-weight: bold;
+  }
+  .cart-container {
+    .form-cart, .checkout-methods-items {
+      .action, a.action {
+        border: none;
+        color: $button-color;
+        text-decoration: underline;
+        text-transform: uppercase;
+        border-radius: 0;
+        font-weight: normal;
+        padding: 0 5px;
+        vertical-align: middle;
+        font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+        span {
+          line-height: 30px;
+          height: 30px;
+        }
+        &:hover, &:focus {
+          border: none;
+          background-color: $nav-color;
+          text-decoration: none;
+        }
+        &.continue, &.update {
+          &:before {
+            display: none;
+          }
+          &:hover, &:focus {
+            border: none;
+            color: $button-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .checkout-methods-items {
+      .action, a.action {
+        &:not(.apply) {
+          text-decoration: none;
+          font-size: 13px;
+          padding: 7px 15px;
+          span {
+            line-height: inherit;
+          }
+        }
+      }
+    }
+  }
+
+
+  .abs-shopping-cart-items {
+    .action {
+      &.continue, &.update {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .cart {
+    &.table-wrapper {
+      .col {
+        &.qty, &.price, &.subtotal, &.item {
+          text-align: center;
+          padding: 10px 5px;
+
+          font-weight: normal;
+        }
+        &.item {
+          text-align: left;
+        }
+      }
+      .actions-toolbar > .action, .action-gift {
+        color: $button-color;
+        text-transform: uppercase;
+        font-weight: normal;
+      }
+    }
+  }
+ 
+  .totals-tax {
+    display:none;
+  }
+  
+  .price-including-tax, .price-excluding-tax {
+    .price {
+      font: normal 14px "Helvetica Neue", Verdana, Arial, sans-serif;
+    }
+  }
+
+  .product-item-name {
+    > a {
+      color: $nav-color;
+      font-weight: bold;
+      font-family: Verdana;
+    }
+  }
+  .item-options {
+    > dt {
+      font: bold 12px Georgia, Times, "Times New Roman", serif;
+      font-style: italic;
+    }
+  }
+}
+
+
+#discount-coupon-form {
+  label {
+    font-size: 12px;
+    font-weight: bold;
+    color: $breadcrumbs-color;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .coupon {
+    .field {
+      float: left;
+    }
+
+    .actions-toolbar {
+      float: right;
+    }
+  }
+
+  .control {
+    display: inline-block;
+    width: auto;
+  }
+
+  .input-text {
+    border-radius: 0;
+    height: 30px;
+    margin: 4px 10px 0 0;
+    width: 190px;
+  }
+  .primary {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 0;
+    button {
+      &.apply {
+        border: 0;
+        padding: 0 5px;
+        line-height: 30px;
+        background-color: $nav-color;
+        text-decoration: underline;
+        &:hover, &:focus {
+          border: none;
+          color: $button-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.cart-summary {
+  .block {
+    > .title {
+      display: none;
+    }
+    > .content {
+      display: block!important;
+    }
+  }
+}
+
+#block-discount, #block-shipping, #cart-totals{
+  @extend .shop-block;
+}
+
+
+#block-discount {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.cart-container {
+  text-transform: uppercase;
+  color: $breadcrumbs-color;
+  .action {
+    &.primary {
+      background-color: $nav-color;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 19px;
+      border: none;
+    }
+  }
+  
+  #block-shipping {
+	display: none;
+  }
+}
+
+#co-shipping-method-form {
+  display: block;
+}
+
+.opc-sidebar {
+	width: 33%;
+}
+
+

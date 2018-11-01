@@ -1,0 +1,104 @@
+#notice-cookie-block {
+   max-height: 95px;
+   .content {
+		max-width: 950px;	
+   }
+   .actions {
+		max-width: 129px;
+		float: right;
+		top: -65px;
+		position: relative;	
+		
+		#btn-cookie-allow {
+			width: 100%; 
+			margin-bottom: 5px;
+			background: #259b24;
+			border: 1px solid #259b24;
+			&:hover {
+				background: #259b24;
+				border: 1px solid #259b24;
+			}  
+			&:active {
+				background: #259b24;
+				border: 1px solid #259b24;
+			}
+		}
+		#btn-cookie-moreinfo {
+			width: 100%; 
+			background: #006bb4;
+			border: 1px solid #1979c3;
+			&:hover{
+				background: #006bb4;
+				border: 1px solid #1979c3;
+			}
+			&:active{
+				background: #006bb4;
+				border: 1px solid #1979c3;
+			}
+		} 	
+   }
+}
+
+@media only screen and (min-width: 769px ) and (max-width: 1024px) {
+	#notice-cookie-block {	
+		max-height: 100%;
+		.actions {
+			max-width:300px;
+			float: none; 
+			position: initial;
+			top: auto; 
+		}	
+		.content {
+			max-width: 100%;  
+		}
+		
+		#btn-cookie-allow {
+			float: left;
+			display: inline-block;
+			max-width: 130px;
+			margin-bottom: 5px;
+			
+		}
+		#btn-cookie-moreinfo {
+			display: inline-block;
+			float: left;
+			max-width: 130px;
+			margin-bottom: 5px;
+			margin-left: 20px; 
+		} 
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#notice-cookie-block {
+		max-height: 100%;
+		.actions {
+			max-width:100%;
+			float: none; 
+			position: initial;
+			top: auto; 
+		}	
+		.content {
+			max-width: 100%;  
+		}
+		#btn-cookie-allow {
+			float: left; 
+			display: inline-block;
+			width: 100%;
+			max-width: 45%;
+			margin-bottom: 5px;
+		} 
+		
+		#btn-cookie-moreinfo  {
+			float: right; 
+			display: inline-block;
+			width: 100%;
+			max-width: 45%;
+			margin-bottom: 5px;
+		}
+		
+		
+	}
+}
+
+

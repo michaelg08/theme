@@ -1,0 +1,30 @@
+.breadcrumbs {
+    @include lib-breadcrumbs();
+}
+
+.breadcrumbs {
+    display: none;
+}
+
+@media all and (min-width: 768px) {
+    .breadcrumbs {
+        display: block;
+        max-width: none;
+        padding: 0;
+        .item {
+            text-transform: uppercase;
+            font-size: 12px;
+            a, strong {
+                color: $breadcrumbs-color;
+            }
+            &:not(:last-child) {
+                &:after {
+                    content: '/';
+                    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+                    font-size: 12px;
+                    line-height: inherit;
+                }
+            }
+        }
+    }
+}

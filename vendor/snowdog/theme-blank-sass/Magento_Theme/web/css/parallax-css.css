@@ -1,0 +1,635 @@
+/** OLD KAHU STYLES **/
+
+#layer-2 {
+
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: ;
+	max-height: 1200px;
+	min-height:460px;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	max-width:1200px;
+	min-width:350px;
+	width: 100%;
+}
+#layer-3 {
+
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	max-height: 1200px;
+	min-height:460px;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	max-width:1200px;
+	min-width:350px;
+	width: 100%;
+}
+#layer-4 {
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: ;
+	max-height: 1200px;
+	min-height:460px;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	max-width:1200px;
+	min-width:350px;
+	width: 100%;
+}
+#layer-5 {
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: ;
+	max-height: 1200px;
+	min-height:460px;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	max-width:1200px;
+	min-width:350px;
+	width: 100%;
+}
+#layer-6 {
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: ;
+	max-height: 1200px;
+	min-height:460px;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	max-width:1200px;
+	min-width:350px;
+	width: 100%;
+}
+#p-desc {
+	background-attachment: fixed;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: ;
+	height: 709px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	max-height: 1200px;
+    min-height: 460px;
+	width: 100%;
+}
+#p-desc .text {
+	width: 705px;
+	margin-left: 136px;
+	margin-top: 166px;
+	float: left;
+	text-align: center;
+}
+#p-desc p {
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	line-height: 26px;
+	margin-bottom: 26px;
+	padding: 0 20px;
+}
+#p-desc p span {
+	background: #000;
+}
+#youtube_player, #youtube_player2, #youtube_player3, #youtube_player4, #youtube_player5{
+  min-height: 350px;
+  max-height: 1200px;
+  max-width:100%;
+  height: 720px;
+}
+#youtube_player iframe {
+	min-height: 350px;
+	max-height: 1200px;
+	max-width:100%;
+	height: 100%;
+	width: 100%;
+}
+#youtube_player2 iframe {
+	min-height: 350px;
+	max-height: 1200px;
+	max-width:100%;
+	height: 100%;
+	width: 100%;
+}
+#youtube_player3 iframe {
+	min-height: 350px;
+	max-height: 1200px;
+	max-width:100%;
+	height: 100%;
+	width: 100%;
+}
+#youtube_player4 iframe {
+	min-height: 350px;
+	max-height: 1200px;
+	max-width:100%;
+	height: 100%;
+	width: 100%;
+}
+#youtube_player5 iframe {
+	min-height: 350px;
+	max-height: 1200px;
+	max-width:100%;
+	height: 100%;
+	width: 100%;
+}
+
+@media only screen and (max-width: 799px) {
+#p-desc {
+    background-attachment: scroll !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
+    height: auto !important;
+}
+#layer-2 {
+    background-attachment: scroll !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
+    height: auto !important;
+}
+#layer-3 {
+    background-attachment: scroll !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
+    height: auto !important;
+}
+#layer-4 {
+    background-attachment: scroll !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
+    height: auto !important;
+}
+#layer-5 {
+    background-attachment: scroll !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
+    height: auto !important;
+}
+#layer-6 {
+    background-attachment: scroll !important;
+    background-size: 100% !important;
+    background-position: 50% 50% !important;
+    height: auto !important;
+}
+.layer1text, .layer2text, .layer3text, .layer4text, .layer5text, .layer6text { 
+	position: relative !important; 
+    height: auto !important; 	
+}
+.product-info-main-description {
+    height: auto !important; 
+	margin-bottom: 10px;
+}
+#youtube_player, #youtube_player2, #youtube_player3, #youtube_player4, #youtube_player5{
+    height: auto; 
+}
+}
+
+@media only screen and (max-width: 768px) {
+	#p-desc {
+		background-attachment: scroll !important;
+		background-position: 50% 0 !important;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+#p-desc {
+	min-height: 445px;
+	background-size: 100% !important;
+}
+#layer-1 {
+	min-height: 445px;
+	background-size: 100% !important;
+} 
+#layer-2 {
+	min-height: 445px;
+	background-size: 100% !important;
+}
+#layer-3 {
+	min-height: 445px;
+	background-size: 100% !important;
+}
+#layer-4 {
+	min-height: 445px;
+	background-size: 100% !important;
+}
+#layer-5 {
+	min-height: 445px;
+	background-size: 100% !important;
+}
+#layer-6 {
+	min-height: 445px;
+	background-size: 100% !important;
+}
+}
+
+@media only screen and (max-width: 720px) {
+#p-desc {
+	min-height: 415px;
+	background-size: 100% !important;
+}
+#layer-1 {
+	min-height: 415px;
+	background-size: 100% !important;
+} 
+#layer-2 {
+	min-height: 415px;
+	background-size: 100% !important;
+}
+#layer-3 {
+	min-height: 415px;
+	background-size: 100% !important;
+}
+#layer-4 {
+	min-height: 415px;
+	background-size: 100% !important;
+}
+#layer-5 {
+	min-height: 415px;
+	background-size: 100% !important;
+}
+#layer-6 {
+	min-height: 415px;
+	background-size: 100% !important;
+}
+}
+
+/** layers settings for mobile screens **/
+
+@media only screen and (max-width: 640px) {
+#p-desc {
+	min-height: 365px;
+	background-size: 100% !important;
+}
+#layer-1 {
+	min-height: 365px;
+	background-size: 100% !important;
+} 
+#layer-2 {
+	min-height: 365px;
+	background-size: 100% !important;
+}
+#layer-3 {
+	min-height: 365px;
+	background-size: 100% !important;
+}
+#layer-4 {
+	min-height: 365px;
+	background-size: 100% !important;
+}
+#layer-5 {
+	min-height: 365px;
+	background-size: 100% !important;
+}
+#layer-6 {
+	min-height: 365px;
+	background-size: 100% !important;
+}
+}
+
+@media only screen and (max-width: 480px) {
+#p-desc {
+	min-height: 215px;
+	background-size: 100% !important;
+}
+#layer-1 {
+	min-height: 215px;
+	background-size: 100% !important;
+} 
+#layer-2 {
+	min-height: 215px;
+	background-size: 100% !important;
+}
+#layer-3 {
+	min-height: 215px;
+	background-size: 100% !important;
+}
+#layer-4 {
+	min-height: 215px;
+	background-size: 100% !important;
+}
+#layer-5 {
+	min-height: 215px;
+	background-size: 100% !important;
+}
+#layer-6 {
+	min-height: 215px;
+	background-size: 100% !important;
+}
+}
+
+@media only screen and (max-width: 350px) {
+#p-desc {
+	min-height: 175px;
+	background-size: 100% !important;
+}
+#layer-1 {
+	min-height: 175px;
+	background-size: 100% !important;
+} 
+#layer-2 {
+	min-height: 175px;
+	background-size: 100% !important;
+}
+#layer-3 {
+	min-height: 175px;
+	background-size: 100% !important;
+}
+#layer-4 {
+	min-height: 175px;
+	background-size: 100% !important;
+}
+#layer-5 {
+	min-height: 175px;
+	background-size: 100% !important;
+}
+#layer-6 {
+	min-height: 175px;
+	background-size: 100% !important;
+}
+}
+
+.layer1text{
+	font-size:13px;
+	font-weight:bold;
+	color:#fff;
+	margin: auto;
+	max-width:550px;
+	height: 300px;	
+	text-align:center;
+	margin-top:auto;
+	margin-bottom: auto;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0;
+	font-weight:lighter;
+}
+.layer2text{
+	font-size:13px;
+	color:#fff;
+	margin: auto;
+	max-width:550px;
+	height: 300px;	
+	text-align:center;
+	margin-top:auto;
+	margin-bottom: auto;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0;
+	font-weight:lighter;
+}
+.layer3text{
+	font-size:13px;
+	color:#fff;
+	margin: auto;
+	max-width:550px;
+	height: 300px;	
+	text-align:center;
+	margin-top:auto;
+	margin-bottom: auto;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0;
+	font-weight:lighter;
+}
+.layer4text{
+	font-size:13px;
+	color:#fff;
+	margin: auto;
+	max-width:550px;
+	height: 300px;	
+	text-align:center;
+	margin-top:auto;
+	margin-bottom: auto;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0;
+	font-weight:lighter;
+}
+.layer5text{
+	font-size:13px;
+	color:#fff;
+	margin: auto;
+	max-width:550px;
+	height: 300px;	
+	text-align:center;
+	margin-top:auto;
+	margin-bottom: auto;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0;
+	font-weight:lighter;
+}
+.layer6text{
+	font-size:13px;
+	color:#fff;
+	margin: auto;
+	max-width:550px;
+	height: 300px;	
+	text-align:center;
+	margin-top:auto;
+	margin-bottom: auto;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right:0;
+	font-weight:lighter;
+}
+.layer1text   span {
+	background-color:#000;
+	opacity: 0.8;
+	font-size:13px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer2text   span {
+	background-color:#000;
+	opacity: 0.8;
+	font-size:13px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer3text   span {
+	background-color:#000;
+	opacity: 0.8;
+	font-size:13px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer4text   span {
+	background-color:#000;
+	opacity: 0.8;
+	font-size:13px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer5text   span {
+	background-color:#000;
+	opacity: 0.8;
+	font-size:13px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer6text   span {
+	background-color:#000;
+	opacity: 0.8;
+	font-size:13px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+@media only screen and (max-width: 770px) {
+.layer1text  span{
+	background-color:#000;
+	opacity: 0.8;
+	font-size:10px; 
+	text-align: center; 
+	line-height:110%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+
+.layer2text  span{
+	background-color:#000;
+	opacity: 0.8;
+	font-size:10px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer3text  span{
+	background-color:#000;
+	opacity: 0.8;
+	font-size:10px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer4text  span{
+	background-color:#000;
+	opacity: 0.8;
+	font-size:10px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer5text  span{
+	background-color:#000;
+	opacity: 0.8;
+	font-size:10px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+.layer6text  span{
+	background-color:#000;
+	opacity: 0.8;
+	font-size:10px; 
+	text-align: center; 
+	line-height:150%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	font-family:  'raleway', sans-serif ,Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif,"Courier New", Courier, monospace;
+	font-weight: 400;	 
+}
+}
+

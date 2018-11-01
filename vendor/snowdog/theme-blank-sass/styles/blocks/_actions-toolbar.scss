@@ -1,0 +1,33 @@
+.actions-toolbar {
+    > .primary,
+    > .secondary {
+        text-align: left;
+        .action {
+            @extend .abs-button-responsive;
+            margin-bottom: $indent__s;
+        }
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+@include min-screen($screen__m) {
+    .actions-toolbar {
+        @include lib-actions-toolbar();
+        > .secondary,
+        > .primary {
+            .action {
+                margin-bottom: 0;
+                width: auto;
+            }
+        }
+    }
+    form {
+        .actions-toolbar {
+            .column:not(.sidebar-additional) &,
+            .column:not(.sidebar-main) & {
+                @extend .abs-margin-for-forms-desktop;
+            }
+        }
+    }
+}

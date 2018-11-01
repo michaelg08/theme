@@ -1,0 +1,184 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php 
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+	$_product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');
+    $_helper = $this->helper('Magento\Catalog\Helper\Output');
+?>
+	
+	
+<?php foreach ($block->getChildHtmlList() as $_html): ?>
+    <?php  echo $_html ?>
+<?php endforeach; ?>
+
+<div style="clear:both;"></div>
+	
+	<?php if($_product->getData('layer1')): ?>
+		<?php $src = $_product->getData('layer1'); ?>
+		<?php if ($src[0] != '/' ): ?>
+		<?php $src = '/' . $src; ?> 
+		<?php endif; ?>
+		<div id="p-desc" style="background-image: url('<?php echo $src ?>');"  class="parallax"></div>
+	<?php endif; ?>
+
+	<?php  if($_product->getData('layer2')): ?>
+		<?php $src = $_product->getData('layer2') ; ?>
+		<?php if ($src[0] != '/' ): ?>
+		<?php $src = '/' . $src; ?> 
+		<?php endif; ?>			
+		<div id="layer-2" style="background-image: url('<?php echo $src ?>');"  class="parallax">
+			<?php if ($_product->getData('layer2text')): ?>
+				<div class="layer2text">
+					<span><?php echo $_product->getData('layer2text'); ?></span>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+	
+	<?php  if($_product->getData('layer3')): ?>
+		<?php $src = $_product->getData('layer3'); ?>
+		<?php if ($src[0] != '/' ): ?>
+		<?php $src = '/' . $src; ?> 
+		<?php endif; ?>				
+		<div id="layer-3" style="background-image: url('<?php echo $src ?>');"  class="parallax">
+			<?php if ( $_product->getData('layer3text')): ?>
+				<div class="layer3text">
+					<span><?php echo $_product->getData('layer3text'); ?></span>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+
+	<?php  if($_product->getData('layer4')): ?>
+		<?php $src = $_product->getData('layer4'); ?>
+		<?php if ($src[0] != '/' ): ?>
+		<?php $src = '/' . $src; ?> 
+		<?php endif; ?>				
+		<div id="layer-4" style="background-image: url('<?php echo $src ?>');"  class="parallax">
+			<?php if ( $_product->getData('layer4text')): ?>
+				<div class="layer4text">
+					<span><?php echo $_product->getData('layer4text'); ?></span>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+
+	<?php  if($_product->getData('layer5')): ?>
+		<?php $src = $_product->getData('layer5'); ?>
+		<?php if ($src[0] != '/' ): ?>
+		<?php $src = '/' . $src; ?> 
+		<?php endif; ?>				
+		<div id="layer-5" style="background-image: url('<?php echo $src ?>');"  class="parallax">
+			<?php if ( $_product->getData('layer5text')): ?>
+				<div class="layer5text">
+					<span><?php echo $_product->getData('layer5text'); ?></span>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>	
+	
+	<?php  if($_product->getData('layer6')): ?>
+		<?php $src = $_product->getData('layer6'); ?>
+		<?php if ($src[0] != '/' ): ?>
+		<?php $src = '/' . $src; ?> 
+		<?php endif; ?>				
+		<div id="layer-6" style="background-image: url('<?php echo $src ?>');"  class="parallax">
+			<?php if ( $_product->getData('layer6text')): ?>
+				<div class="layer6text">
+					<span><?php echo $_product->getData('layer6text'); ?></span>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>	
+	
+	<?php if($_product->getData('youtube_link')): ?> 
+		<div id="youtube_player">
+			<iframe src="<?php echo $_product->getData('youtube_link');?>" frameborder="0" allowfullscreen ></iframe>
+		</div>
+	<?php endif; ?>
+
+	<?php if($_product->getData('youtube_link2')): ?> 
+		<div id="youtube_player2">
+			<iframe src="<?php echo $_product->getData('youtube_link2');?>" frameborder="0" allowfullscreen ></iframe>
+		</div>
+	<?php endif; ?>
+
+	<?php if($_product->getData('youtube_link3')): ?> 
+		<div id="youtube_player3">
+			<iframe src="<?php echo $_product->getData('youtube_link3');?>" frameborder="0" allowfullscreen ></iframe>
+		</div>
+	<?php endif; ?>
+	
+	<?php if($_product->getData('youtube_link4')): ?> 
+		<div id="youtube_player4">
+			<iframe src="<?php echo $_product->getData('youtube_link4');?>" frameborder="0" allowfullscreen ></iframe>
+		</div>
+	<?php endif; ?>
+	
+	<?php if($_product->getData('youtube_link5')): ?> 
+		<div id="youtube_player5">
+			<iframe src="<?php echo $_product->getData('youtube_link5');?>" frameborder="0" allowfullscreen ></iframe>
+		</div>
+	<?php endif; ?>
+	
+<script>
+    require([
+			 'jquery',
+			 'parallax',
+			 'localscroll',
+			 'domReady!'
+			], function ($,parallax,localscroll) {
+		$(document).ready( function () {
+			
+			$('.zoomWindowContainer').height(455);
+			
+			if (!detectmob()) {
+				$('#p-desc').parallax("50%", 0.2);	
+				$('#layer-2').parallax("50%", 0.2);	
+				$('#layer-3').parallax("50%", 0.2);
+				$('#layer-4').parallax("50%", 0.1);
+				$('#layer-5').parallax("50%", 0.1);
+				$('#layer-6').parallax("50%", 0.1);
+				$('#youtube_player').parallax("50%", 0.1);
+				$('#youtube_player2').parallax("50%", 0.1);
+				$('#youtube_player3').parallax("50%", 0.1);
+				$('#youtube_player4').parallax("50%", 0.1);
+				$('#youtube_player5').parallax("50%", 0.1);
+			}
+			
+			if (jQuery('.product-info-main-description').length && $('.product-info-main-description').html() != '' && $('#p-desc').length) {
+				var firstTop = $('.product-info-main-description').offset().top; 
+				var nextTop  = $('#p-desc').offset().top;  
+				var newDescriptionHeight = nextTop - firstTop;
+				$('.product-info-main-description').css('height', newDescriptionHeight - 54);
+			}
+			
+			$('.zoom-gallery-item').on('click',function(){
+				$('.zoomWindowContainer').height(455);
+			});
+			
+		});
+	     function detectmob() { 
+			if( navigator.userAgent.match(/Android/i)
+				|| navigator.userAgent.match(/webOS/i)
+				|| navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)
+				|| navigator.userAgent.match(/BlackBerry/i)
+				|| navigator.userAgent.match(/Windows Phone/i)
+			){
+                return true;
+			} else {
+				return false;
+			}
+		}
+    });
+</script>
+

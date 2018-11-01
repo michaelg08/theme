@@ -1,0 +1,43 @@
+@import 'module/common';
+
+.sidebar {
+  .block {
+    &.block-wishlist {
+      display: none;
+    }
+  }
+}
+
+#wishlist-view-form {
+  .product-item-info {
+    width: auto;
+    text-align: left;
+  }
+  .product-item-photo {
+    max-width: 115px;
+    float: left;
+  }
+  .product-item-name {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    a {
+      &.product-item-link {
+        color: $link-color;
+        font: normal 16px "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+      }
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.wishlist-index-index {
+  .products-grid {
+    margin-right: 0;
+    .product-item {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

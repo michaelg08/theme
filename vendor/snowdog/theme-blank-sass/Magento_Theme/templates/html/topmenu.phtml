@@ -1,0 +1,54 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+
+
+
+<nav class="navigation">
+	<ul>
+<!-- 
+<nav class="navigation" data-action="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+-->	
+        <?php /* @escapeNotVerified */ echo $_menu; ?>
+        <?php /* @escapeNotVerified */ echo $block->getChildHtml(); ?>
+		
+        <li class="level0 nav-3 parent">
+			<a id="blog-top-menu-item" href="http://thebear.karhu.com/blog/" class="level-top"><span>BLOG</span></a>
+		</li>
+
+		<li class="level0 nav-4 parent" >
+			<a class="level-top" href="#" id="top-menu-link">
+			</a>
+            <ul class="level0 submenu">
+					<div id="top-menu-search-form">
+						<?php echo $block->getLayout()->createBlock('Magento\Framework\View\Element\Template')->setTemplate('Magento_Search::form.mini.phtml')->toHtml();?>
+					</div>
+					<div id="top-menu-list-wrapper">
+						<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('nav-links')->toHtml();?>
+						<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('contact-links')->toHtml();?>
+					</div>
+            </ul>
+        </li>
+		<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('navigation-shoes-links')->toHtml();?>	
+    </ul>
+	
+</nav>
+
+
+<?php //var_dump ($_menu); ?>

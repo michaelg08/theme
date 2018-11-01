@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+    <!--
+        <remove src="mage/gallery/gallery.css"/>
+    -->
+    </head>
+    <body>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+		<referenceContainer name="content" >
+				<!-- Facebook pixel block -->
+				<block class="Magento\Cms\Block\Block" name="facebook_pixel_block">
+					<arguments>
+						<argument name="block_id" xsi:type="string">facebook_pixel_block</argument>
+					</arguments>
+				</block>		
+			
+			<referenceBlock name="product.info.details" remove="true" />
+			<referenceBlock name="product.attributes" remove="true" />
+			<!--
+			<referenceBlock name="product.info.additional" remove="true" />
+			-->
+		<referenceBlock name="product.info.overview" remove="true" />
+
+	    <referenceContainer name="product.info.main">
+	         <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sizenote" template="product/view/attribute.phtml" after="product.price.final">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getSizenote</argument>
+                        <argument name="at_code" xsi:type="string">sizenote</argument>
+                        <argument name="css_class" xsi:type="string">sizenote</argument>
+                        <argument name="at_label" xsi:type="string">none</argument>
+                        <argument name="title" translate="true" xsi:type="string">Sizenote</argument>
+                    </arguments>
+                </block>
+	         <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="product/view/attribute.phtml" after="product.info.sizenote">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getSku</argument>
+                        <argument name="at_code" xsi:type="string">sku</argument>
+                        <argument name="css_class" xsi:type="string">sku</argument>
+                        <argument name="at_label" xsi:type="string">none</argument>
+                        <argument name="title" translate="true" xsi:type="string">Sku</argument>
+                    </arguments>
+             </block>
+
+			<block class="Magento\Catalog\Block\Product\View" name="product.info" template="product/view/form.phtml" after="product.info.sku">
+                    <container name="product.info.form.content" as="product_info_form_content">
+                        <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="product/view/addtocart.phtml"/>
+                    </container>
+                    <block class="Magento\Framework\View\Element\Template" name="product.info.form.options" as="options_container">
+                        <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper" as="product_options_wrapper" template="product/view/options/wrapper.phtml">
+                            <block class="Magento\Catalog\Block\Product\View\Options" name="product.info.options" as="product_options" template="product/view/options.phtml">
+                                <block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" as="default" template="product/view/options/type/default.phtml"/>
+                                <block class="Magento\Catalog\Block\Product\View\Options\Type\Text" as="text" template="product/view/options/type/text.phtml"/>
+                                <block class="Magento\Catalog\Block\Product\View\Options\Type\File" as="file" template="product/view/options/type/file.phtml"/>
+                                <block class="Magento\Catalog\Block\Product\View\Options\Type\Select" as="select" template="product/view/options/type/select.phtml"/>
+                                <block class="Magento\Catalog\Block\Product\View\Options\Type\Date" as="date" template="product/view/options/type/date.phtml"/>
+                            </block>
+                            <block class="Magento\Framework\View\Element\Html\Calendar" name="html_calendar" as="html_calendar" template="Magento_Theme::js/calendar.phtml"/>
+                        </block>
+                        <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper.bottom" as="product_options_wrapper_bottom" template="product/view/options/wrapper/bottom.phtml">
+                            <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart.additional" as="product.info.addtocart" template="product/view/addtocart.phtml"/>
+                        </block>
+                    </block>
+			</block>
+	    </referenceContainer>
+		
+		<container name="product.info.main.description" htmlTag="div" htmlClass="product-info-main-description">
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.desc" template="product/view/attribute.phtml" >
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getDescription</argument>
+                    <argument name="at_code" xsi:type="string">description</argument>
+                    <argument name="css_class" xsi:type="string">description</argument>
+                    <argument name="at_label" translate="true" xsi:type="string">none</argument>
+                    <argument name="title" translate="true" xsi:type="string">none</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="description"</argument>
+               </arguments>
+			</block>
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.customweight" template="product/view/attribute.phtml" >
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getCustomweight</argument>
+                    <argument name="at_code" xsi:type="string">customweight</argument>
+                    <argument name="css_class" xsi:type="string">weight</argument>
+                    <argument name="at_label" translate="true" xsi:type="string">Weight:</argument>
+                    <argument name="title" translate="true" xsi:type="string">Weight</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="customweight"</argument>
+               </arguments>
+			</block>
+			<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.heeltotoe" template="product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getHeeltotoe</argument>
+                    <argument name="at_code" xsi:type="string">heeltotoe</argument>
+                    <argument name="css_class" xsi:type="string">heeltotoe</argument>
+                    <argument name="at_label" translate="true" xsi:type="string">Heel/Toe:</argument>
+                    <argument name="title" translate="true" xsi:type="string">heeltotoe</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="heeltotoe"</argument>
+               </arguments>
+			</block>
+		</container>
+
+
+
+
+			 <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.details" template="product/view/details.phtml" after="product.info.media">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.description" template="product/view/attribute.phtml" group="detailed_info">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getDescription</argument>
+                        <argument name="at_code" xsi:type="string">description</argument>
+                        <argument name="css_class" xsi:type="string">description</argument>
+                        <argument name="at_label" xsi:type="string">none</argument>
+                        <argument name="title" translate="true" xsi:type="string">Details</argument>
+                    </arguments>
+                </block>
+
+
+                <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.attributes" as="additional" template="product/view/attributes.phtml" group="detailed_info">
+                    <arguments>
+                        <argument translate="true" name="title" xsi:type="string">More Information</argument>
+                    </arguments>
+                </block>
+
+            </block>
+			
+		</referenceContainer>
+
+    </body>
+</page>

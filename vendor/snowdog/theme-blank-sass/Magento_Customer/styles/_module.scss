@@ -1,0 +1,482 @@
+@import 'variables';
+@import 'module/common';
+
+
+.customer-account-login, .customer-account-create {
+  .page-title-wrapper {
+    .page-title {
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-rendering: optimizeLegibility;
+      color: $breadcrumbs-color;
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 3px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.login-container {
+  max-width: 360px;
+  margin: 0 auto;
+  .block {
+    .block-title {
+      margin: 0 0 0.5em;
+      color: $account-title;
+      font: normal 24px "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;;
+      font-weight: 400;
+      padding-bottom: 0;
+      line-height: 1.2;
+      text-transform: uppercase;
+      border-bottom: none;
+    }
+  }
+
+  .block-new-customer {
+    .actions-toolbar {
+      margin: 0;
+    }
+  }
+
+  .actions-toolbar {
+    > .secondary {
+      &:last-child {
+        display: block;
+        float: none;
+        text-align: left;
+      }
+      .action {
+        color: $link-color;
+        font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+        margin: 10px 0;
+      }
+    }
+    .primary {
+      a {
+        &.action {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.fieldset {
+  position: relative;
+  margin: 0;
+  > .field {
+    &:not(.choice) {
+      margin: 0 0 10px;
+      > .label {
+        padding: 0;
+        font: normal  13px "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+        width: auto;
+        line-height: 19px;
+        font-weight: 600;
+        margin-bottom: 2px;
+        text-align: left;
+        display: block;
+        float: none;
+        &:after {
+          color: $star-color;
+          font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+        }
+      }
+    }
+    
+    &.choice, &.no-label {
+      background-color: #f4f4f4;
+      display: inline-block;
+      width: auto;
+      max-width: none;
+      min-width: 250px;
+      float: none;
+      padding: 6px 10px;
+      input[type="checkbox"] {
+        margin: 3px 10px 0 0;
+        float: left;
+      }
+      .label {
+        padding: 0;
+        > span {
+          font-size: 13px;
+          font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+          font-weight: 600;
+        }
+      }
+      &:before {
+        width: 0;
+        padding: 0;
+      }
+      &:hover, &:focus {
+        background-color: #ececec;
+      }
+    }
+    .control {
+      float: none;
+      max-width: 365px;
+      width: 100%;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+    margin-top: 0;
+    font-size: 12px;
+    color: $star-color;
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+  }
+}
+
+.column {
+  &:not(.sidebar-additional), &:not(.sidebar-main) {
+    form {
+      .actions-toolbar {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.block-customer-login {
+  margin-top: 20px;
+  .note {
+    font-style: italic;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 13px;
+    color: $note-color;
+  }
+}
+
+.actions-toolbar {
+  .primary {
+    text-align: center;
+    float: none;
+    min-width: 50%;
+    margin-top: 20px;
+    .action {
+      float: none;
+      max-width: 365px;
+      text-align: center;
+      border-radius: 0;
+      border: none;
+      text-transform: uppercase;
+      width: 100%;
+      line-height: 19px;
+      font: normal 13px "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+      &:hover, &:focus {
+        background: $nav-color;
+        border: none;
+      }
+      &.create {
+        background-color: $link-color;
+        &:hover, &:focus {
+          background-color: $link-color;
+        }
+      }
+      &[type="submit"] {
+        background-color: $nav-color;
+        &:hover, &:focus {
+          background-color: $nav-color;
+        }
+      }
+      span {
+        line-height: 19px;
+      }
+    }
+  }
+}
+.form-create-account {
+  .legend {
+    font-style: italic;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 13px;
+    color: $note-color;
+    margin-bottom: 7px;
+    line-height: 1.5;
+  }
+  .actions-toolbar {
+    max-width: 455px;
+    border-top: 1px solid $border-color;
+    margin: 10px 0 0;
+    padding-top: 10px;
+    .primary {
+      float: right;
+      margin-top: 0;
+      .action {
+        margin: 0;
+      }
+    }
+    .secondary {
+      .back {
+        line-height: 20px;
+        display: inline-block;
+        padding: 5px;
+        font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+        color: $link-color;
+        &:before {
+          content: '\00AB';
+          font-size: 80%;
+        }
+      }
+    }
+  }
+}
+
+#password-error, #password-strength-meter-container {
+  display: none;
+}
+
+.create {
+  &.account {
+    .legend {
+      display: none;
+    }
+  }
+}
+
+.account {
+  .page-title-wrapper {
+    .page-title {
+      font: normal 24px 'Raleway-SemiBold';
+      color: $subtitle-color;
+    }
+  }
+  .block-title, .box-title {
+    text-transform: uppercase;
+  }
+  .sidebar {
+    .block-title {
+      border-top: 1px solid $dark-border-color;
+      font-family: 'Raleway-SemiBold';
+      padding: 10px 0 0;
+      margin-bottom: 5px;
+      color: $nav-color;
+      > strong {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .empty {
+      text-transform: none;
+      font-family: Verdana, Arial, sans-serif;
+      color: $subtitle-color;
+    }
+  }
+  .main {
+    &.column {
+      .block {
+        .block-content {
+          .box {
+            margin: 0!important;
+          }
+        }
+        padding-bottom: 40px;
+        margin-bottom: 45px;
+        border-bottom: 1px solid $dark-border-color;
+        .block-title, .box-title {
+          color: $account-title;
+          font-family: "Raleway-SemiBold";
+        }
+        .block-title {
+          padding-bottom: 7px;
+          border-bottom: 1px solid $dark-border-color;
+          > strong {
+            font-size: 15px!important;
+          }
+          .action {
+            &.edit {
+              padding: 10px;
+              margin: 0;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .legend {
+      font-size: 18px;
+      display: block;
+      border-bottom: 1px solid $border-color;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      padding-bottom: 7px;
+      width: 100%;
+      color: $account-title;
+    }
+    .form-newsletter-manage {
+      .legend {
+        display: none;
+      }
+    }
+  }
+  .box-content {
+    address, p {
+      font-style: italic;
+      font-family: Georgia, Times, "Times New Roman", serif;
+    }
+  }
+  .box-actions {
+    .action {
+      color: $link-color;
+      &.edit {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: Verdana, Arial, sans-serif;
+      }
+      &.change-password {
+        font-family: Georgia, Times, "Times New Roman", serif;
+        font-style: italic;
+      }
+    }
+  }
+  address, p {
+    font-family: Verdana, Arial, sans-serif;
+    color: $subtitle-color;
+  }
+  .fieldset {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    > .field {
+      &:not(.choice) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+        > .label {
+          color: $subtitle-color;
+          font-family: "Raleway-SemiBold", "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+          font-weight: 600;
+          &:after {
+            font-size: 11px;
+            margin: 0;
+          }
+        }
+      }
+      &.choice {
+        > .label {
+          font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+          > span {
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+        &.newsletter {
+          .label {
+            > span {
+              font-weight: 600;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-newsletter-manage, .form-edit-account, .form-address-edit, .form-wishlist-items {
+  .actions-toolbar {
+    clear: both;
+    margin: 10px 0 0;
+    padding-top: 10px;
+    border-top: 1px solid $border-color;
+    text-align: right;
+    .action {
+      &.back {
+        color: $link-color;
+        line-height: 20px;
+        display: inline-block;
+        padding: 5px;
+        font-family: Verdana, Arial, sans-serif;
+        &:before {
+          content: '\00ab';
+          display: inline-block;
+          font-size: 80%;
+          float: left;
+          margin-right: 5px;
+        }
+      }
+    }
+    .primary {
+      float: none;
+      min-width: 0;
+      margin-top: 0;
+      .action {
+        color: $button-color;
+        width: auto;
+        padding: 7px 15px;
+        font-size: 13px;
+        min-width: 140px;
+      }
+    }
+  }
+}
+
+.form-newsletter-manage {
+  .fieldset {
+    border-top: 1px solid $border-color;
+    margin-bottom: 20px;
+  }
+}
+
+.form-edit-account, .form-address-edit {
+  input {
+    color: $subtitle-color!important;
+    font-size: 15px;
+  }
+}
+
+.field {
+  &.street {
+    .field {
+     &.additional {
+       .label {
+         height: auto;
+         margin: 0;
+         position: static;
+         width: auto;
+         color: $subtitle-color;
+         font-family: "Raleway-SemiBold", "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+         font-weight: 600;
+         font-size: 13px;
+       }
+     }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .block-customer-login {
+    padding-left: 20px;
+    border-left: 1px solid $border-color;
+  }
+
+  .form-create-account {
+    margin-left: 30px;
+  }
+
+  .login-container {
+    max-width: none;
+    margin: 0;
+  }
+
+  #maincontent {
+    > .page-title-wrapper {
+      .page-title {
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 992px) {
+  .block-customer-login {
+    padding-left: 60px;
+  }
+}

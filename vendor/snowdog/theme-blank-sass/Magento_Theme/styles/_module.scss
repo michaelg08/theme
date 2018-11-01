@@ -1,0 +1,256 @@
+@import 'variables';
+@import 'module/common';
+
+
+
+/*----header----*/
+
+.page-header {
+  background-color: $nav-color;
+  padding: 15px 0;
+  .panel {
+    padding: 0;
+    &.wrapper {
+      border: none;
+	  @media all and (max-width: 770px) {
+		 height: 35px;
+	  }
+    }
+  }
+  .header {
+    &.panel, &.content {
+      max-width: none;
+      padding: 0;
+	  @media all and (max-width: 770px) {
+		 height: 50px;
+	  }
+    }
+  }
+}
+
+.header {
+  &.panel {
+    > .header {
+      &.links {
+        > li {
+          margin-right: 25px;
+          padding-top: 15px;
+          a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $mobile-nav-color;
+            font: normal 10px "Helvetica Neue", Verdana, Arial, sans-serif;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &.content {
+    text-align: center;
+    .block {
+      &.block-search {
+        display: none;
+      }
+    }
+    .minicart-wrapper {
+      display: none;
+    }
+  }
+}
+
+.shoelink {
+  cursor: pointer;
+}
+
+.logo {
+  float: none;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  top: 12px;
+  left: -50px;
+}
+
+
+/*---footer---*/
+
+.page-footer {
+  margin-top: 120px;
+  padding: 0;
+  width: 50%;
+  float:right;
+}
+
+
+.footer {
+  text-transform: uppercase;
+  &.content {
+    clear: both;
+    border-top: 4px solid $nav-color;
+    padding-top: 20px;
+    .block {
+      &.newsletter {
+        float: none;
+      }
+    }
+
+    .links {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .copyright {
+    text-align: right;
+    width: 100%;
+    font-size: 11px;
+    color: $nav-color;
+    margin-top: 10px;
+  }
+
+  li {
+    a {
+      color: $nav-color;
+      font: normal 14px "Raleway-Bold", "Helvetica Neue", Verdana, Arial, sans-serif;
+      line-height: 26px;
+    }
+  }
+
+
+  .footer-newsletter-btn {
+    margin-top: 25px;
+    a {
+      border: 1px solid $btn-border-color;
+      color: $nav-color;
+      display: inline-block;
+      padding: 8px 10px;
+      text-shadow: none;
+      background-color: $button-color;
+      font-size: 13px;
+      font-weight: normal;
+      font-family: 'Raleway', "Helvetica Neue", Verdana, Arial, sans-serif;
+      line-height: 19px;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .bugs {
+    display: none;
+  }
+}
+
+.product {
+  &.info {
+    &.detailed {
+      display: none;
+    }
+  }
+}
+
+
+@media all and (min-width: $screen__m) {
+  .logo {
+    left: 0;
+    top: 5px;
+  }
+
+  .footer {
+    &.content {
+      width: 50%;
+      float: right;
+      padding: 20px 0;
+    }
+  }
+}
+
+//Shop buttons block //  
+.shop-buttons-bottom{
+	width:100%; 
+	overflow:hidden;
+}
+#shop-buttons-bottom-wrapper {
+	max-width: 450px; 
+	width: 100%;
+}
+#shop-bottom-men{
+	height:100px; 
+	float:left; 
+	width:165px; 
+	background: #000; 
+	color: #fff; 
+	font-size: +2em; 
+	padding-top: 25px; 
+	text-align: right;
+	a {
+		color: #fff; 
+		text-decoration: none; 
+		display:block; 
+		width: 100%; 
+		height: 100%;
+	}
+}
+#shop-bottom-men-delimiter{
+	height:100px; 
+	float:left; 
+	background: #000; 
+	color: #fff; 
+	font-size: +2em; 
+	padding-top: 25px; 
+	padding-left: 5px; 
+	padding-right: 5px; 
+}
+#shop-bottom-women {
+	height:100px; 
+	float:left; 
+	width:210px; 
+	background: #000; 
+	color: #fff; 
+	font-size: +2em; 
+	padding-top: 25px; 
+	text-align: left;
+	a {
+		color: #fff; 
+		text-decoration: none; 
+		display:block; 
+		width: 100%; 
+		height: 100%;
+	}
+}
+#shop-buttons-bottom-shopnow-wrapper {
+    max-width: 320px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#shop-bottom-shopnow {
+    height: 100px;
+    float: left;
+    width: 320px;
+    background: #000;
+    color: #fff;
+    font-size: +2em;
+    padding-top: 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+	a {
+		color: #fff; 
+		text-decoration: none; 
+		display:block; 
+		width: 100%; 
+		height: 100%;
+	}
+}
+#topmenu-account-link {
+    dispay: none;
+}
+@media only screen and (max-width: 768px) {
+    #topmenu-account-link {
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 25px !important;
+    }
+}

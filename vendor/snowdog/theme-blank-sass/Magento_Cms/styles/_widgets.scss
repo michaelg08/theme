@@ -1,0 +1,474 @@
+$widgets-indent__bottom: $indent__base !default;
+
+.block-static-block,
+.block-cms-link {
+    &.widget {
+        margin-bottom: $widgets-indent__bottom;
+        .links & {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.block-cms-link-inline {
+    &.widget {
+        margin: 0;
+    }
+}
+
+
+.highlightedlanding p{
+    margin: 0;
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+    color: #636363;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.cms-faq-fi, .cms-faq-swe, .cms-faq-it, .cms-faq-benelux, .cms-faq-deu, .cms-faq-nor, .cms-karhu-technology{
+    .main {
+        text-align: left;
+    }
+    .highlightedlanding {
+        p{
+            font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+            color: #636363;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+}
+
+.cms-faq-deu {
+    .highlightedlanding {
+        p{
+            color: $subtitle-color;
+        }
+    }
+    ul {
+        list-style: none;
+        li {
+            font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+            line-height: 1.5;
+            color: $subtitle-color;
+        }
+    }
+}
+
+.cms-faq-benelux {
+    .highlightedlanding {
+        p{
+            font-style: italic;
+            line-height: 24px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+.cms-privacy-policy, .cms-terms-of-website-use {
+    .main-container {
+        padding: 20px 0 0!important;
+    }
+    .breadcrumbs {
+        display: none;
+    }
+    .main {
+        width: 100%;
+    }
+    h1 {
+        font-family: "Raleway-Bold", "Helvetica Neue", Verdana, Arial, sans-serif
+    }
+
+    .nav-sections {
+        margin-bottom: 0;
+    }
+
+    .std {
+        p {
+            margin: 0 0 1.5em;
+        }
+    }
+}
+
+.cms-running-form {
+    .breadcrumbs {
+        display: none;
+    }
+}
+
+.cms-return-policy {
+    .breadcrumbs {
+        display: none;
+    }
+
+    .page-main {
+        max-width: 1200px;
+    }
+
+    h1 {
+        color: $link-color;
+    }
+
+    h2, .std {
+        color: $nav-color;
+    }
+
+    .std {
+        font-size: 14px;
+        font-family: Verdana;
+        line-height: 1.5;
+    }
+}
+
+.cms-karhu-technology {
+    #maincontent {
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.cms-customer-service, .cms-contacts {
+    color: $nav-color;
+    .breadcrumbs {
+        display: block;
+    }
+    .customer-services {
+        .dealer, .web-order {
+            h1, h2, h3, p {
+                color: $nav-color;
+            }
+            h1 {
+                color: $link-color;
+            }
+
+            h2 {
+                margin-top: 20px;
+            }
+
+            p {
+                line-height: 21px;
+                font-family: Verdana;
+            }
+        }
+        .web-order {
+            margin-top: 15px;
+        }
+    }
+}
+
+.cms-karhu-history {
+    font-family: Verdana;
+    h1, h3, p, .historycontenttext1 {
+        color: $nav-color;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .historysidebar {
+        background-color: $nav-color;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 15px 30px;
+        a {
+            color: #ffffff;
+            line-height: 30px;
+            text-decoration: none;
+            margin: 0 3%;
+            &:hover, &:focus {
+                color: $link-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .karhuhistory {
+        margin-bottom: 20px;
+    }
+
+    .historycontentblueln {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $history-color;
+    }
+
+    .historycontentbluebox {
+        position: absolute;
+        width: 50px;
+        height: 30px;
+        font-size: 18px;
+        left: 0;
+        font-weight: bold;
+        background-color: $history-color;
+    }
+
+    .historycontenttext1 {
+        text-align: left;
+        margin-left: 40px;
+        padding: 30px 0;
+    }
+
+    .historycontent {
+        border-bottom: 1px solid $history-border-color;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+
+    #sidebar {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .breadcrumbs {
+        display: none;
+    }
+
+    .timeline-title {
+        h3 {
+            font-size: 25px;
+            margin-bottom: 5px;
+            letter-spacing: -2px;
+            font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+        }
+    }
+    .year {
+        position: absolute;
+        font-weight: bold;
+        color: $nav-color;
+        left: 5px;
+        top: 7px;
+    }
+}
+
+.cms-running-form {
+    h1 {
+        margin: 0;
+        margin-bottom: 0.7em;
+        color: $nav-color;
+        font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.2;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+    }
+    
+    .running-form {
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .runningformrowtext {
+        padding-top: 10px;
+        color: $nav-color;
+        line-height: 20px;
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Raleway-Bold;
+            color: $nav-color;
+        }
+
+        h2 {
+            margin: 0;
+            margin-bottom: 0.5em;
+            color: $content-color;
+            font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            font-style: normal;
+            text-rendering: optimizeLegibility;
+            text-transform: uppercase;
+        }
+    }
+
+    .running-video {
+        iframe {
+            max-width: 100%;
+        }
+    }
+}
+
+
+@media all and (min-width: 768px) {
+
+    .cms-terms-of-website-use {
+        .main-container {
+            padding-top: 45px !important;
+        }
+    }
+
+    .cms-faq-fi, .cms-faq-swe, .cms-faq-it, .cms-faq-benelux, .cms-faq-deu, .cms-faq-nor, .cms-karhu-technology {
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .faq-content {
+            position:relative;
+            margin: 0 auto;
+            padding: 0 15px 0 150px;
+        }
+    }
+
+    .cms-running-form {
+        .running-form {
+            max-width: 750px;
+        }
+
+        .runningformrow {
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+
+        .running-video {
+            float: left;
+            width: 50%;
+        }
+
+        .runningformrowtext {
+            float: right;
+            width: 50%;
+            padding-left: 30px;
+        }
+    }
+
+    .cms-customer-service, .cms-contacts {
+        .customer-services {
+            margin: 15px auto 0;
+            max-width: 800px;
+            .dealer, .web-order {
+                width: 50%;
+                float: left;
+            }
+            .web-order {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .cms-karhu-history {
+        .nav-sections {
+            margin-bottom: 13px;
+        }
+
+        #maincontent {
+            max-width: 898px;
+        }
+        #sidebar {
+            width: 102px;
+            float: left;
+            margin-top: 68px!important;
+            text-align: right;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        .karhuhistory {
+            max-width: 620px;
+            margin-bottom: 65px;
+            text-align: left;
+            h2 {
+                font-size: 26px;
+            }
+        }
+
+        .historycontent {
+            max-width: 630px;
+            min-height: 455px;
+            margin-bottom: 60px;
+            width: 100%;
+            float: right;
+            position: relative;
+        }
+
+        .historycontentbluebox {
+            width: 82px;
+            height: 40px;
+            font-size: 24px;
+        }
+
+        .historycontenttext1 {
+            margin-left: 98px;
+            padding: 25px 8% 25px 0;
+            font-size: 15px;
+            line-height: 19px;
+        }
+
+        .historycontentimg1 {
+            position: absolute;
+            width: 501px;
+            left: 85px;
+            bottom: 20px;
+        }
+
+        .historysidebar {
+            text-align: right;
+            padding: 38px 0 20px;
+            a {
+                margin-right: 1px;
+            }
+        }
+
+        .year {
+            position: absolute;
+            left: 22px;
+            top: 10px;
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+    .cms-karhu-history {
+        .historycontent {
+            max-width: 757px;
+        }
+
+        .historycontentimg1 {
+            width: 650px;
+        }
+    }
+
+    .cms-running-form {
+        .running-form {
+            max-width: 906px;
+        }
+    }
+
+    .cms-faq-fi, .cms-faq-swe, .cms-faq-it, .cms-faq-benelux, .cms-faq-deu, .cms-faq-nor, .cms-karhu-technology {
+        .main {
+            max-width: 906px;
+        }
+        .faq-content {
+            padding-left:200px;
+        }
+    }
+}
